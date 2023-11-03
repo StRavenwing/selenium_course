@@ -14,6 +14,9 @@ try:
     button = browser.find_element(By.CSS_SELECTOR, '[type="submit"]')
     button.click()
 
+    alert = browser.switch_to.alert
+    alert.accept()
+
     x_element = browser.find_element(By.ID, "input_value")
     x = x_element.text
     y = calc(x)
